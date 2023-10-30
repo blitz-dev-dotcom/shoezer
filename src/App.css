@@ -448,6 +448,7 @@ body{
 }
 
 .contents{
+  
   border-radius: 5px;
   background-color: rgb(255, 255, 255);
   overflow-y: scroll;
@@ -510,8 +511,8 @@ body{
 
 
 .card{
-  height: 160px;
-  width: 150px;
+  height: 170px;
+  width: 140px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -521,8 +522,8 @@ body{
 }
 .card-pad{
   position: relative;
-  height: 96%;
-  width: 93%;
+  height: 98%;
+  width: 98%;
   display: flex;
   flex-direction: column;
   gap: 5px;
