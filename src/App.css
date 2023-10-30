@@ -1,0 +1,987 @@
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+::-webkit-scrollbar{
+  width: 4px;
+  
+  
+}
+::-webkit-scrollbar-thumb{
+ background-color:rgb(200, 206, 206);
+ height: 20px;
+ 
+}
+::-webkit-scrollbar-track{
+  background-color:  rgb(255, 255, 255);
+  border-radius: 5px;
+}
+/**@keyframes stunner{
+  0%{
+    background: linear-gradient(45deg,rgb(242, 255, 0) 0%,rgb(255, 77, 0) 20%,rgb(255, 0, 247),rgb(8, 0, 255) );
+  }
+  50%{background: linear-gradient(45deg,rgb(242, 255, 0) 0%,rgb(255, 77, 0) 20%,rgb(255, 0, 247),rgb(8, 0, 255) );
+    background: linear-gradient(45deg,rgb(255, 0, 0) 0%,rgb(240, 255, 27) 20%,rgb(0, 157, 255),rgb(255, 0, 225) );
+  }
+  100%{
+    background: linear-gradient(45deg,rgb(242, 255, 0) 0%,rgb(255, 77, 0) 20%,rgb(255, 0, 247),rgb(8, 0, 255) );
+  }
+}  **/
+
+.contain{
+  height: 99.5%;
+  width: 99.6%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.navbar{
+  height: 80px;
+  width: 100%;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navigation{
+  position:relative;
+  height:94%;
+  width: 99%;
+  display: flex;
+  gap: 5px;
+}
+.logo{
+  width: 18% ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo-h{
+  color: rgb(84, 84, 230);
+  letter-spacing: 1.5px;
+  font-family: 'Playfair Display', serif;
+}
+.searchbox{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.aria-input{
+  height: 30px;
+  width: 450px;
+  border: 1px rgb(221, 208, 208) solid;
+  border-radius: 10px;
+  padding: 5px 5px 5px 15px;
+  font-size: 1rem;
+  color: rgb(55, 53, 53);
+  outline: none;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 1.5px;
+}
+.lists{
+  width: 31% ;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 20px;
+  
+}
+.login-button{
+  height: 38px;
+  width: 130px;
+  border: none;
+  background-color: rgb(87, 87, 177);
+  color: rgb(255, 255, 255);
+  outline: none;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 1.5px;
+  font-weight: 800;
+  border-radius: 5px;
+  
+}
+.home{
+  height: 35px;
+  width: 35px;
+  color: rgb(100, 70, 206);
+}
+.cartnav{
+  height: 35px;
+  width: 35px;
+  color: rgb(255, 0, 0);
+  
+}
+
+.contents{
+  grid-area: con;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  overflow-y: scroll;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cont-pad{
+  position: relative;
+  height: 98%;
+  width: 98%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  border-radius: 5px;
+}
+.sidebar{
+  grid-area: side;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.side-pad{
+  height: 95%;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.side-img{
+  position: relative;
+  height: 40%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.side-det{
+  height: 60%;
+}
+.side-pre{
+  position: relative;
+  height: 300px;
+  width: 400px;
+  border-radius: 15px;
+}
+.side-det-pad{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  
+  border-radius: 15px; 
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer{
+  grid-area: foo;
+  border-radius: 5px;
+  background-color: rgb(211, 218, 218);
+}
+
+.card{
+  height: 250px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.5px rgb(242, 239, 239) solid;
+  border-radius: 10px;
+  box-shadow: 3px 3px 6px rgb(206, 227, 234);
+}
+.card-pad{
+  position: relative;
+  height: 96%;
+  width: 93%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.proimg{
+  position: relative;
+  height: 45%;
+  width: 100%;
+}
+.details{
+  position:relative;
+  height: 65%;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+ 
+}
+.images{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+}
+.header{
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  margin: 0;
+  letter-spacing: 1.5px;
+}
+.para{
+  font-size: 15px;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 1px;
+
+}
+.sex-def{
+  font-size: 15px; 
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 1px;
+}
+.shoe-cont{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.counter{
+  height: 20px;
+  display: flex;
+  gap:10px;
+}
+.cart{
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.cart-pad{
+  height: 100%;
+  width: 180px;
+  display: flex;
+  gap: 10px;
+  
+}
+.decreament{
+  height: 50px;
+  width: 50px;
+  background-color: rgb(240, 240, 45);
+  border: none;
+  border-radius: 5px;
+}
+.increament{
+  height: 50px;
+  width: 50px;
+  background-color: rgb(240, 240, 45);
+  border: none;
+  border-radius: 5px;
+}
+.countnum{
+  height: 50px;
+  width: 50px;    
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+.cartico{
+  color: rgb(255, 0, 0);
+}
+.addtobag{
+  width: 100%;
+  height: 30px;
+  border: none;
+  background-color: rgb(255, 255, 0);
+  border-radius: 8px;
+  color: rgb(240, 0, 0);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+}
+.buynow{
+  height: 50px;
+  background-color: rgb(240, 240, 45);
+  border-radius: 6px;
+  border: 1px  rgb(255, 255, 0) solid ;
+  color: aliceblue;
+  font-weight: 800;
+  font-size: large;
+  font-family: 'Poppins', sans-serif; 
+}
+.profilejsx{
+  height: 38px;
+  width: 150px;
+  border: none;
+  background-color: rgb(157, 157, 236);
+  color: rgb(255, 255, 255);
+  outline: none;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 1favicon.5px;
+  font-weight: 800;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width:100px) and (max-width:400px){
+  body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+::-webkit-scrollbar{
+  width: 4px;
+  
+  
+}
+::-webkit-scrollbar-thumb{
+ background-color:rgb(200, 206, 206);
+ height: 20px;
+ 
+}
+::-webkit-scrollbar-track{
+  background-color:  rgb(255, 255, 255);
+  border-radius: 5px;
+}
+/**@keyframes stunner{
+  0%{
+    background: linear-gradient(45deg,rgb(242, 255, 0) 0%,rgb(255, 77, 0) 20%,rgb(255, 0, 247),rgb(8, 0, 255) );
+  }
+  50%{background: linear-gradient(45deg,rgb(242, 255, 0) 0%,rgb(255, 77, 0) 20%,rgb(255, 0, 247),rgb(8, 0, 255) );
+    background: linear-gradient(45deg,rgb(255, 0, 0) 0%,rgb(240, 255, 27) 20%,rgb(0, 157, 255),rgb(255, 0, 225) );
+  }
+  100%{
+    background: linear-gradient(45deg,rgb(242, 255, 0) 0%,rgb(255, 77, 0) 20%,rgb(255, 0, 247),rgb(8, 0, 255) );
+  }
+}  **/
+
+.contain{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.navbar{
+  height: 25%;
+  width: 100%;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  
+}
+.navigation{
+  position:relative;
+  height:100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 0.7fr 1fr;
+  grid-template-areas: 
+  'logo list'
+  'search search'
+  ;
+  gap: 5px;
+}
+.logo{
+  grid-area: logo;
+  width: 100%;
+  display: flex;
+}
+.logo-h{
+  font-size: 1rem;
+  color: rgb(84, 84, 230);
+  letter-spacing: 1.5px;
+  font-family: 'Playfair Display', serif;
+}
+.searchbox{
+  grid-area: search;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.aria-input{
+  height: 30px;
+  width: 260px;
+  border: 1px rgb(221, 208, 208) solid;
+  border-radius: 10px;
+  padding: 3px 3px 3px 8px;
+  font-size: 1rem;
+  color: rgb(55, 53, 53);
+  outline: none;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 1.5px;
+}
+.lists{
+  grid-area: list;
+  width: 100%;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+.login-button{
+  height: 30px;
+  width: 60px;
+  border: none;
+  background-color: rgb(87, 87, 177);
+  color: rgb(255, 255, 255);
+  outline: none;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 1.5px;
+  font-weight: 800;
+  border-radius: 5px;
+  
+}
+.home{
+  height: 25px;
+  width: 35px;
+  color: rgb(100, 70, 206);
+}
+.cartnav{
+  height: 25px;
+  width: 25px;
+  color: rgb(255, 0, 0);
+  
+}
+
+.contents{
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  overflow-y: scroll;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cont-pad{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  border-radius: 5px;
+}
+.sidebar{
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.side-pad{
+  height: 85%;
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.side-img{
+  position: relative;
+  height: 40%;
+  width: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.side-det{
+  height: 60%;
+}
+.side-pre{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+}
+.side-det-pad{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border-radius: 15px; 
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+.card{
+  height: 160px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.5px rgb(242, 239, 239) solid;
+  border-radius: 10px;
+  box-shadow: 3px 3px 6px rgb(206, 227, 234);
+}
+.card-pad{
+  position: relative;
+  height: 96%;
+  width: 93%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.proimg{
+  position: relative;
+  height: 35%;
+  width: 100%;
+}
+.details{
+  position:relative;
+  height: 65%;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+ 
+}
+.images{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+}
+.header{
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  margin: 0;
+  letter-spacing: 1.5px;
+}
+.para{
+  font-size: 12px;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 1px;
+
+}
+.sex-def{
+  font-size: 13px; 
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 1px;
+}
+.shoe-cont{
+  position: relative;
+  width: 85%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.counter{
+  height: 20px;
+  display: flex;
+  gap:10px;
+}
+.cart{
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.cart-pad{
+  height: 100%;
+  width: 180px;
+  display: flex;
+  gap: 10px;
+  
+}
+.decreament{
+  height: 50px;
+  width: 50px;
+  background-color: rgb(240, 240, 45);
+  border: none;
+  border-radius: 5px;
+}
+.increament{
+  height: 50px;
+  width: 50px;
+  background-color: rgb(240, 240, 45);
+  border: none;
+  border-radius: 5px;
+}
+.countnum{
+  height: 50px;
+  width: 50px;    
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+.cartico{
+  color: rgb(255, 0, 0);
+}
+.addtobag{
+  width: 100%;
+  height: 25px;
+  border: none;
+  background-color: rgb(255, 255, 0);
+  border-radius: 5px;
+  color: rgb(240, 0, 0);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+}
+.buynow{
+  height: 50px;
+  background-color: rgb(240, 240, 45);
+  border-radius: 6px;
+  border: 1px  rgb(255, 255, 0) solid ;
+  color: aliceblue;
+  font-weight: 800;
+  font-size: large;
+  font-family: 'Poppins', sans-serif; 
+}
+.profilejsx{
+  height: 38px;
+  width: 150px;
+  border: none;
+  background-color: rgb(157, 157, 236);
+  color: rgb(255, 255, 255);
+  outline: none;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 1favicon.5px;
+  font-weight: 800;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+}
+@media (min-width:400px) and (max-width:800px){
+  
+    body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+  }
+  ::-webkit-scrollbar{
+    width: 4px;
+    
+    
+  }
+  ::-webkit-scrollbar-thumb{
+   background-color:rgb(200, 206, 206);
+   height: 20px;
+   
+  }
+  ::-webkit-scrollbar-track{
+    background-color:  rgb(255, 255, 255);
+    border-radius: 5px;
+  }
+  /**@keyframes stunner{
+    0%{
+      background: linear-gradient(45deg,rgb(242, 255, 0) 0%,rgb(255, 77, 0) 20%,rgb(255, 0, 247),rgb(8, 0, 255) );
+    }
+    50%{background: linear-gradient(45deg,rgb(242, 255, 0) 0%,rgb(255, 77, 0) 20%,rgb(255, 0, 247),rgb(8, 0, 255) );
+      background: linear-gradient(45deg,rgb(255, 0, 0) 0%,rgb(240, 255, 27) 20%,rgb(0, 157, 255),rgb(255, 0, 225) );
+    }
+    100%{
+      background: linear-gradient(45deg,rgb(242, 255, 0) 0%,rgb(255, 77, 0) 20%,rgb(255, 0, 247),rgb(8, 0, 255) );
+    }
+  }  **/
+  
+  .contain{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .navbar{
+    height: 25%;
+    width: 100%;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    
+  }
+  .navigation{
+    position:relative;
+    height:100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 0.7fr 1fr;
+    grid-template-areas: 
+    'logo list'
+    'search search'
+    ;
+    gap: 5px;
+  }
+  .logo{
+    grid-area: logo;
+    width: 100%;
+    display: flex;
+  }
+  .logo-h{
+    font-size: 1rem;
+    color: rgb(84, 84, 230);
+    letter-spacing: 1.5px;
+    font-family: 'Playfair Display', serif;
+  }
+  .searchbox{
+    grid-area: search;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .aria-input{
+    height: 30px;
+    width: 350px;
+    border: 1px rgb(221, 208, 208) solid;
+    border-radius: 10px;
+    padding: 3px 3px 3px 8px;
+    font-size: 1rem;
+    color: rgb(55, 53, 53);
+    outline: none;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 1.5px;
+  }
+  .lists{
+    grid-area: list;
+    width: 100%;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+  }
+  .login-button{
+    height: 30px;
+    width: 60px;
+    border: none;
+    background-color: rgb(87, 87, 177);
+    color: rgb(255, 255, 255);
+    outline: none;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 1.5px;
+    font-weight: 800;
+    border-radius: 5px;
+    
+  }
+  .home{
+    height: 25px;
+    width: 35px;
+    color: rgb(100, 70, 206);
+  }
+  .cartnav{
+    height: 25px;
+    width: 25px;
+    color: rgb(255, 0, 0);
+    
+  }
+  
+  .contents{
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    overflow-y: scroll;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .cont-pad{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    border-radius: 5px;
+  }
+  .sidebar{
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .side-pad{
+    height: 85%;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .side-img{
+    position: relative;
+    height: 40%;
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .side-det{
+    height: 60%;
+  }
+  .side-pre{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+  }
+  .side-det-pad{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-radius: 15px; 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  
+  .card{
+    height: 160px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.5px rgb(242, 239, 239) solid;
+    border-radius: 10px;
+    box-shadow: 3px 3px 6px rgb(206, 227, 234);
+  }
+  .card-pad{
+    position: relative;
+    height: 96%;
+    width: 93%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .proimg{
+    position: relative;
+    height: 35%;
+    width: 100%;
+  }
+  .details{
+    position:relative;
+    height: 65%;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+   
+  }
+  .images{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+  }
+  .header{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    margin: 0;
+    letter-spacing: 1.5px;
+  }
+  .para{
+    font-size: 12px;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+  
+  }
+  .sex-def{
+    font-size: 13px; 
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+  }
+  .shoe-cont{
+    position: relative;
+    width: 85%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .counter{
+    height: 20px;
+    display: flex;
+    gap:10px;
+  }
+  .cart{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .cart-pad{
+    height: 100%;
+    width: 180px;
+    display: flex;
+    gap: 10px;
+    
+  }
+  .decreament{
+    height: 50px;
+    width: 50px;
+    background-color: rgb(240, 240, 45);
+    border: none;
+    border-radius: 5px;
+  }
+  .increament{
+    height: 50px;
+    width: 50px;
+    background-color: rgb(240, 240, 45);
+    border: none;
+    border-radius: 5px;
+  }
+  .countnum{
+    height: 50px;
+    width: 50px;    
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .cartico{
+    color: rgb(255, 0, 0);
+  }
+  .addtobag{
+    width: 100%;
+    height: 25px;
+    border: none;
+    background-color: rgb(255, 255, 0);
+    border-radius: 5px;
+    color: rgb(240, 0, 0);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+  }
+  .buynow{
+    height: 50px;
+    background-color: rgb(240, 240, 45);
+    border-radius: 6px;
+    border: 1px  rgb(255, 255, 0) solid ;
+    color: aliceblue;
+    font-weight: 800;
+    font-size: large;
+    font-family: 'Poppins', sans-serif; 
+  }
+  .profilejsx{
+    height: 38px;
+    width: 150px;
+    border: none;
+    background-color: rgb(157, 157, 236);
+    color: rgb(255, 255, 255);
+    outline: none;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 1favicon.5px;
+    font-weight: 800;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+}
