@@ -1,4 +1,5 @@
 import React, {useState,useContext} from "react";
+import { useNavigate } from "react-router-dom";
 import './login.css';
 import UserContext from "../context/UserContext";
 
@@ -6,6 +7,7 @@ export default function Login(){
     const [username,setusername] = useState('');
     const [password,setpassword] = useState('');
     const [log,setlog] = useState(false);
+    const navigate = useNavigate();
 
     const {setuser} = useContext(UserContext);
     const {setloginfo} = useContext(UserContext);
@@ -14,6 +16,7 @@ export default function Login(){
             e.preventDefault();
             if (username === logdetails.getusername && password === logdetails.getpassword){
                 setuser({username,password});
+                navigate('/hl');
             }
             else(alert('your login credentials are incorrect!'))
             setlog(true);
