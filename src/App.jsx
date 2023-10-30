@@ -58,7 +58,7 @@ function App() {
                     type='text'
                     value={search}
                     onChange={(e)=>{
-                        setsearch(e.target.value);
+                        setsearch(e.target.value.toLowerCase());
                         settrigger(true);
                         }
                     }
