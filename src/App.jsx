@@ -136,9 +136,10 @@ const Home = (props)=>{
 const Buynow = ()=>{
     const { Buy } = useContext(UserContext);
     const { shoes } = useContext(UserContext);
+    const {loginfo} = useContext(UserContext);
     const [Count,setCount] = useState(1);
     return(
-        <>
+        <div id='side'>
             <div className='sidebar'>
             <div className='side-pad'>
             <div className='side-img'>
@@ -182,13 +183,13 @@ const Buynow = ()=>{
                                 }} />
                         </div>
                     </div>
-                    <button className='buynow'>Continue to Shipping</button>
+                    {loginfo?<button className='buynow' >Continue to Shipping</button>:<button className='buynow1'>Login To Continue!!</button>}
                     
                 </div>
             </div>
           </div>
       </div>
-        </>
+        </div>
     )
 }
 

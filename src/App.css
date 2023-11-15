@@ -134,7 +134,7 @@ body{
   border-radius: 5px;
 }
 .sidebar{
-  grid-area: side;
+  
   border-radius: 5px;
   background-color: rgb(255, 255, 255);
   display: flex;
@@ -308,6 +308,17 @@ body{
   font-weight: 800;
   font-size: large;
   font-family: 'Poppins', sans-serif; 
+}
+.buynow1{
+  height: 50px;
+  background-color:red;
+  border-radius: 6px;
+  color: aliceblue;
+  font-weight: 800;
+  font-size: large;
+  font-family: 'Poppins', sans-serif; 
+  border: none;
+  outline: none;
 }
 .profilejsx{
   height: 38px;
@@ -637,6 +648,17 @@ body{
   font-weight: 800;
   font-size: large;
   font-family: 'Poppins', sans-serif; 
+}
+.buynow1{
+  height: 50px;
+  background-color:red;
+  border-radius: 6px;
+  color: aliceblue;
+  font-weight: 800;
+  font-size: large;
+  font-family: 'Poppins', sans-serif; 
+  border: none;
+  outline: none;
 }
 .profilejsx{
   height: 38px;
