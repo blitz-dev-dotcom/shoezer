@@ -105,11 +105,10 @@ const Home = (props)=>{
                              src={shoe.proimg}
                              alt=""
                              className="images"
-                            
-                             />
+                            />
                         </div>
                         <div className="details">
-                            <h3 className="header">{shoe.name.toLocaleUpperCase()}</h3>
+                            <div className='det-pad'><h3 className="header">{shoe.name.toLocaleUpperCase()}</h3>
                             <p className="sex-def">{shoe.sex}</p>
                             <p className="para">${shoe.price}</p>
                             <button className="addtobag" key={shoe.id} id={shoe.id} onClick={()=>{
@@ -117,6 +116,7 @@ const Home = (props)=>{
                               setidey(shoe.id);
                               setBuy(shoe.id);
                             }}>Buy Now <AiOutlineShoppingCart className="cartico" /></button> 
+                            </div>
                         </div>
                     </div>
                     </div>
