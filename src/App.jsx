@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route , Link, Navigate } from 'react-router-dom';
+import { Routes, Route , Link } from 'react-router-dom';
 import './App.css';
 import { useState ,useContext} from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -7,7 +7,7 @@ import Profile from './components/profile';
 import {AiOutlineShoppingCart,AiFillHome} from 'react-icons/ai';
 import Login from "./components/login";
 import UserContext from './context/UserContext';
-import { isDisabled } from '@testing-library/user-event/dist/utils';
+
 
 
 function App() {
@@ -138,6 +138,7 @@ const Buynow = ()=>{
     const { shoes } = useContext(UserContext);
     const {loginfo} = useContext(UserContext);
     const [Count,setCount] = useState(1);
+    const navigate = useNavigate();
     return(
         <div id='side'>
             <div className='sidebar'>
@@ -183,7 +184,9 @@ const Buynow = ()=>{
                                 }} />
                         </div>
                     </div>
-                    {loginfo?<button className='buynow' >Continue to Shipping</button>:<button className='buynow1'>Login To Continue!!</button>}
+                    {loginfo?<button className='buynow' >Continue to Shipping</button>:<button className='buynow1' onClick={()=>{
+                        navigate('/login')
+                    }}>Login To Continue!!</button>}
                     
                 </div>
             </div>
