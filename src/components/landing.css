@@ -1,0 +1,115 @@
+.container{
+    height: 90vh;
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pad{
+    position: relative;
+    height: 100%;
+    width: 98%;
+    display: flex;
+}
+.textpad{
+    position: relative;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+}
+.text{
+    position: relative;
+    height: 80%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    font-size: 40px;
+    color: rgb(48, 48, 208);
+    font-family: 'Montserrat', sans-serif;
+}
+#span{
+    font-family: 'Playfair Display', serif;
+    font-size: 70px;
+    letter-spacing: 1.5px;
+    cursor: default;
+}
+#span:hover{
+    text-decoration: none;
+}
+.image{
+    position: relative;
+    height: 100%;
+    width: 50%;
+}
+img{
+    position: relative;
+    height:100%;
+    width: 100%;
+    
+}
+@media screen and (max-width:500px){
+    .container{
+        height: 90vh;
+        width: 100%;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .pad{
+        position: relative;
+        height: 100%;
+        width: 98%;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .textpad{
+        position: relative;
+        height: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .text{
+        position: relative;
+        height: 80%;
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    h1{
+        font-size: 20px;
+        color: rgb(48, 48, 208);
+        font-family: 'Montserrat', sans-serif;
+    }
+    #span{
+        font-family: 'Playfair Display', serif;
+        font-size: 30px;
+        letter-spacing: 1.5px;
+        cursor: default;
+    }
+    #span:hover{
+        text-decoration: none;
+    }
+    .image{
+        position: relative;
+        height: 50%;
+        width: 100%;
+    }
+    img{
+        position: relative;
+        height:100%;
+        width: 100%;
+        
+    }
+}

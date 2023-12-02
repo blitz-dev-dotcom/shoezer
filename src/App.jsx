@@ -5,9 +5,10 @@ import { useState ,useContext} from 'react';
 import { useNavigate } from 'react-router-dom';
 import Profile from './components/profile';
 import {AiOutlineShoppingCart,AiFillHome} from 'react-icons/ai';
+import { IoSearchOutline } from "react-icons/io5";
 import Login from "./components/login";
 import UserContext from './context/UserContext';
-
+import Landing from './components/landing';
 
 
 function App() {
@@ -28,12 +29,12 @@ function App() {
                     value={search}
                     onChange={(e)=>{
                         setsearch(e.target.value.toLowerCase());
-                        settrigger(true);
+                        ;
                         }
                     }
                     placeholder='Search by brands'
                 />
-                
+                <IoSearchOutline onClick={()=>{settrigger(true)}} style={{height:`25px`,width:`25px`}}/>
             </div>
             <div className='lists'>
                 <AiOutlineShoppingCart className="cartnav" />
@@ -49,6 +50,7 @@ function App() {
         </nav>
       </div>
         <Routes>
+            <Route index element={<Landing />} />
             <Route path='/hl' element={<Home prop1={search} prop2={trigger}/>} />
             <Route path='/login' element={<Login />} />
             <Route path='/Buy' element={<Buynow />} />
@@ -89,8 +91,10 @@ const Home = (props)=>{
                             <p className="sex-def">{item.sex}</p>
                             <p className="para">${item.price}</p>
                             <button className="addtobag" key={item.id} id={item.id} onClick={()=>{
+                              navigate('/Buy');
                               setidey(item.id);
-                            }}>Preview <AiOutlineShoppingCart className="cartico" /></button> 
+                              setBuy(item.id);
+                            }}>Buynow <AiOutlineShoppingCart className="cartico" /></button> 
                         </div>
                     </div>
                     </div>

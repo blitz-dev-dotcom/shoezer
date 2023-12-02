@@ -38,7 +38,7 @@ body{
   gap: 5px;
 }
 .navbar{
-  height: 80px;
+  height: 10vh;
   width: 100%;
   border-radius: 5px;
   background-color: rgb(255, 255, 255);
@@ -69,6 +69,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 10px;
 }
 .aria-input{
   height: 30px;
