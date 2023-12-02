@@ -34,7 +34,7 @@ function App() {
                     }
                     placeholder='Search by brands'
                 />
-                <IoSearchOutline onClick={()=>{settrigger(true)}} style={{height:`25px`,width:`25px`}}/>
+                <IoSearchOutline onClick={()=>{if(search === ""){settrigger(false)}else{settrigger(true)}}} style={{height:`25px`,width:`25px`}}/>
             </div>
             <div className='lists'>
                 <AiOutlineShoppingCart className="cartnav" />
